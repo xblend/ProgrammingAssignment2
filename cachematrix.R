@@ -41,7 +41,7 @@ cacheSolve <- function(x, ...) {
         data<-x$get()
         ## Calculate the inverse of the cached matrix
         if(nrow(data)==ncol(data)&& det(data)!=0){
-          inverse<-solve(data)
+          inverse<-solve(data,...)
         }
         ## Store inverse of matrix in the cache
         x$setinverse(inverse)
